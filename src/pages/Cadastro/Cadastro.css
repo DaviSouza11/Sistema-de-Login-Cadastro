@@ -1,0 +1,108 @@
+.cadastro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f4f8;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    padding: 20px; /* Adicionado para não colar nas bordas em telas menores */
+  }
+  
+  .cadastro-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 420px; /* Um pouco mais largo que o login */
+    border-top: 4px solid #1a73e8;
+  }
+  
+  .cadastro-header {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .cadastro-header h2 {
+    color: #1a73e8;
+    margin: 0 0 8px 0;
+    font-size: 24px;
+  }
+  
+  .cadastro-header p {
+    color: #666666;
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  /* Reutilizando estilos de inputs do Login */
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+  
+  .input-group input:focus {
+    outline: none;
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+  }
+  
+  .cadastro-btn {
+    width: 100%;
+    background-color: #1a73e8;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .cadastro-btn:hover {
+    background-color: #1557b0;
+  }
+  
+  .cadastro-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666666;
+    border-top: 1px solid #eeeeee;
+    padding-top: 20px;
+  }
+  
+  /* Transformando um botão em link para acessibilidade */
+  .link-btn {
+    background: none;
+    border: none;
+    color: #1a73e8;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+    font-family: inherit;
+  }
+  
+  .link-btn:hover {
+    text-decoration: underline;
+  }

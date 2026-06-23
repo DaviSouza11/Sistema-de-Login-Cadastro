@@ -1,0 +1,70 @@
+/* Container que ocupa a tela toda com o fundo azul claro */
+.home-container {
+    min-height: 100vh;
+    background-color: #f0f4f8; 
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  
+  /* Cabeçalho azul no topo */
+  .home-header {
+    background-color: #1a73e8; 
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .home-header h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  /* Botão de sair no cabeçalho */
+  .logout-btn {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .logout-btn:hover {
+    background-color: white;
+    color: #1a73e8;
+  }
+  
+  /* Área central onde o conteúdo fica */
+  .home-content {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Cartão branco de boas-vindas */
+  .welcome-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    border-top: 4px solid #1a73e8;
+  }
+  
+  .welcome-card h1 {
+    color: #1a73e8;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .welcome-card p {
+    color: #666666;
+    line-height: 1.6;
+    margin: 0;
+  }

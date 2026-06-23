@@ -1,0 +1,122 @@
+/* Container que centraliza o card na tela toda */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f4f8; /* Azul claro ao fundo */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+  
+  /* O cartão branco de login */
+  .login-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 380px;
+    border-top: 4px solid #1a73e8; /* Detalhe azul no topo */
+  }
+  
+  /* Cabeçalho */
+  .login-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .login-header h2 {
+    color: #1a73e8; /* Azul principal */
+    margin: 0 0 8px 0;
+    font-size: 24px;
+  }
+  
+  .login-header p {
+    color: #666666;
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  /* Estilo dos inputs */
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box; /* Impede que o input vaze do card */
+    transition: border-color 0.3s;
+  }
+  
+  .input-group input:focus {
+    outline: none;
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+  }
+  
+  /* Link de Esqueceu a senha */
+  .forgot-password {
+    text-align: right;
+    margin-bottom: 25px;
+  }
+  
+  .forgot-password a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  
+  .forgot-password a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Botão Entrar */
+  .login-btn {
+    width: 100%;
+    background-color: #1a73e8;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-btn:hover {
+    background-color: #1557b0; /* Azul um pouco mais escuro ao passar o mouse */
+  }
+  
+  /* Rodapé (Cadastro) */
+  .login-footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #666666;
+    border-top: 1px solid #eeeeee;
+    padding-top: 20px;
+  }
+  
+  .login-footer a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .login-footer a:hover {
+    text-decoration: underline;
+  }
