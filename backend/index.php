@@ -23,7 +23,7 @@
     ],
         //Endpoint Cadastro
         'api/cadastro' => [
-            'file' => 'auth/cadastro.php',
+            'file' => 'auth/usuarios.php',
             'login' => false,
             'grupos' => null
         ]
