@@ -17,7 +17,7 @@
     $rotas = [
         //Endpoint Login
         'api/login' => [ 
-            'file' => 'auth/login.php',
+            'file' => 'auth/usuarios.php',
             'login' => false,
             'grupos' => null
     ],

@@ -28,7 +28,7 @@ const Cadastro: React.FC<CadastroProps> = ({ onNavigateLogin }) => {
     };
 
     try {
-      const resposta = await fetch('http://localhost:8080/index.php', {
+      const resposta = await fetch('http://localhost:8080/api/cadastro', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
