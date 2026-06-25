@@ -21,7 +21,6 @@ const Cadastro: React.FC<CadastroProps> = ({ onNavigateLogin }) => {
     }
 
     const payload = {
-      acao: 'cadastro', // Uma dica para o seu futuro PHP saber o que fazer
       nome,
       email,
       password
@@ -40,7 +39,7 @@ const Cadastro: React.FC<CadastroProps> = ({ onNavigateLogin }) => {
       console.log("Retorno do Servidor:", dados);
 
       alert("Cadastro realizado com sucesso! Faça seu login.");
-      onNavigateLogin(); // Manda o usuário de volta para o Login
+      onNavigateLogin(); 
       
     } catch (erro) {
       console.error("Erro na requisição:", erro);
