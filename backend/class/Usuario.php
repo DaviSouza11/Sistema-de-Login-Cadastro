@@ -112,5 +112,36 @@ class Usuario
             
 
     }
+
+    public function validarJWT($token_jwt)
+    {
+
+        //separa as 3 partes do token (header, payload e assinatura)
+        $partes = explode('.', $token_jwt);
+        if (count($partes) != 3){
+            return false; //Token com estrutura inválida
+        }
+
+        list($base64UrlHeader, $base64UrlPayload, $base64UrlSignature) = $partes;
+
+        //Recria a assinatura usando a chave secreta de login
+        $chave_secreta = 'M1nh4_Ch4v3_S3cr3t4_Svp3r_S3gur4_!@#';
+        $assinaturaValida = hash_hmac('sha256', $base64UrlHeader . "." . $base64UrlPayload . "." . $base64UrlSignature, true);
+        $base64UrlSignatureValida = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($assinaturaValida));
+
+        //Verifica se a assinatura coincide com a conta
+        if ($base64UrlSignature !== $base64UrlSignatureValida){
+            return false; //token falsificado ou corrompido
+        }
+
+        //decodifica os dados do payload para verificar a expiração
+        $payload = json_encode(base64_decode($base64UrlPayload), true);
+
+        if ($payload['exp' < time()]){
+            return false; //token expirado
+        }
+
+        return $payload;
+    }
     
 }
