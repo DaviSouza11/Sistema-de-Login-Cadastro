@@ -10,15 +10,16 @@ interface LoginProps {
 const Login: React.FC<LoginProps> = ({ onLoginSuccess, onNavigateCadastro }) => {
   // 2. Estados com tipagem implícita (TypeScript sabe que é string)
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [senha, setSenha] = useState('');
 
   // 3. Tipamos o evento como React.FormEvent para o TypeScript não reclamar
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    // AJUSTE: Traduzimos 'password' para 'senha' para o PHP entender perfeitamente
     const payload = {
-      email,
-      password
+      email: email,
+      senha: senha
     };
 
     try {
@@ -34,10 +35,19 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess, onNavigateCadastro }) => 
       const dados = await resposta.json();
       console.log("Retorno da API:", dados);
 
-      // Aqui você verificaria se o PHP retornou sucesso real (ex: dados.status === 200)
-      // Por enquanto, vamos simular que deu certo e trocar de tela
-      alert("Autenticação enviada ao servidor!");
-      onLoginSuccess(); 
+      // AJUSTE: Lógica real validando a resposta do servidor
+      if (resposta.ok) {
+        
+        // Guarda a "pulseira VIP" (JWT) no bolso do navegador
+        if (dados.token) {
+          localStorage.setItem('token', dados.token);
+        }
+        onLoginSuccess(); // Troca de tela apenas se deu tudo certo!
+        
+      } else {
+        // Se a senha estiver errada, o PHP devolve status 401 e cai aqui
+        alert("Erro: " + (dados.erro || "E-mail ou senha incorretos."));
+      }
       
     } catch (erro) {
       console.error("Erro na requisição:", erro);
@@ -69,8 +79,8 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess, onNavigateCadastro }) => 
             <label>Senha</label>
             <input
               type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
               placeholder="Digite sua senha"
               required
             />
