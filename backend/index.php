@@ -17,13 +17,13 @@
     $rotas = [
         //Endpoint Login
         'api/login' => [ 
-            'file' => 'auth/usuarios.php',
+            'file' => 'auth/loginUsuarios.php',
             'login' => false,
             'grupos' => null
     ],
         //Endpoint Cadastro
         'api/cadastro' => [
-            'file' => 'auth/usuarios.php',
+            'file' => 'api/usuarios.php',
             'login' => false,
             'grupos' => null
         ]

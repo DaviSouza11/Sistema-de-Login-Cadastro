@@ -1,6 +1,6 @@
 <?php
     // Traz a classe que criamos acima
-    require_once __DIR__ . '/../../class/Usuario.php';
+    require_once __DIR__ . '/../class/Usuario.php';
 
     // 1. Configurações de CORS e Headers (Exatamente como você mandou)
     $origin = $_SERVER['HTTP_ORIGIN'] ?? '*';
