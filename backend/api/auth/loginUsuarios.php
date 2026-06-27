@@ -22,4 +22,29 @@
         echo json_encode(["erro" => "Método não permitido!"]);
     }
 
+    //captura os dados do Json 
+    $data = json_decode(file_get_contents("php://input"));
+
+    if(!empty($data->email) && !empty($data->senha))
+    {
+        $usuario = new Usuario();
+
+        $resultado = $usuario->login($data->email, $data->senha);
+
+        if($resultado['status'] === 'sucesso'){
+            http_response_code(200);
+            echo json_encode([
+                "mensagem" => "Login realizado com sucesso!",
+                "token" => $resultado['token']
+            ]);
+        } else {
+            http_response_code(401); //usuario nao encontrado
+            echo json_encode(["erro" => "Usuario nao encontrado!"]);
+        }
+
+    } else {
+        http_response_code(400); // 400 Bad Request
+        echo json_encode(["erro" => "Por favor, preencha o e-mail e a senha."]);
+    }
+
 ?>
