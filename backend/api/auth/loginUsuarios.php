@@ -22,4 +22,25 @@
         echo json_encode(["erro" => "Método não permitido!"]);
     }
 
+    $data = json_decode(file_get_contents("php://input"));
+
+    if(!empty($data->email) && !empty($data->senha))
+    {
+        $usuario = new Usuario();
+
+        //chama a função de login fazendo o trabalho com o banco
+        $resultado = $usuario->login($data->email, $data->senha);
+
+        if($resultado['status'] === 'sucesso')
+        {
+            http_response_code(200); //ok
+            echo json_encode([
+                "mensagem" => "Login realizado com sucesso!",
+                "token" => $resultado['token']
+            ]);
+        } else {
+            http_response_code(401);
+            echo json_encode(["erro" => "E-mail ou senha incorretos"]);
+        }
+    }
 ?>
