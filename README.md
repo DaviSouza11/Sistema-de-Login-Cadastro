@@ -247,20 +247,6 @@ O projeto ainda está em desenvolvimento e possui pontos que precisam ser corrig
 - As respostas da API devem seguir um formato consistente para sucesso e erro.
 - Ainda não existem testes automatizados ou integração contínua.
 
-## Próximas melhorias
-
-- [ ] Resolver os conflitos pendentes no endpoint de login.
-- [ ] Padronizar as rotas entre React e PHP.
-- [ ] Adicionar validação de entrada no servidor.
-- [ ] Mover configurações e segredos para variáveis de ambiente.
-- [ ] Proteger endpoints privados com middleware de autenticação.
-- [ ] Implementar controle de autorização por perfil.
-- [ ] Adicionar testes unitários e de integração.
-- [ ] Documentar a API com OpenAPI/Swagger.
-- [ ] Adicionar Docker e Docker Compose.
-- [ ] Configurar verificações automáticas com GitHub Actions.
-- [ ] Publicar uma demonstração da aplicação.
-
 ## Scripts do front-end
 
 ```bash
