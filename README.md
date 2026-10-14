@@ -274,7 +274,3 @@ Este projeto foi criado para exercitar:
 
 - [GitHub](https://github.com/DaviSouza11)
 - [LinkedIn](https://www.linkedin.com/in/davi-belo-de-souza-6bb351262)
-
-## Licença
-
-Este projeto ainda não possui uma licença definida. Antes de permitir reutilização ou contribuições externas, adicione um arquivo `LICENSE` ao repositório.
